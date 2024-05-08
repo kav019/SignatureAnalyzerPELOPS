@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y software-properties-common && \
         unzip \
         wget \
         zlib1g-dev \
+        ghostscript \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     apt-get clean && \
     apt-get autoremove -y && \
@@ -35,6 +36,3 @@ RUN python3 -m pip install --upgrade setuptools
 RUN mkdir signatureanalyzer
 COPY . /signatureanalyzer/
 RUN python3 -m pip install -e ./signatureanalyzer/.
-
-# Test
-RUN signatureanalyzer -h

@@ -4,6 +4,7 @@ from twobitreader import TwoBitFile
 from typing import Union
 from sys import stdout
 from .utils import compl, get_true_snps_from_maf, get_dnps_from_maf
+import pdb
 
 acontext = itertools.product('A', 'CGT', 'ACGT', 'ACGT')
 ccontext = itertools.product('C', 'AGT', 'ACGT', 'ACGT')
@@ -94,8 +95,8 @@ def get_spectra_from_maf(
                     chromosome = 'Y'
                 elif chromosome == 'MT':
                     chromosome = 'M'
-                if not chromosome.startswith('chr'):
-                    chromosome = 'chr' + chromosome
+                #if not chromosome.startswith('chr'):
+                #    chromosome = 'chr' + chromosome
 
                 _contexts.append(hg[chromosome][pos-2:pos+1].lower())
 
