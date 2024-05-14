@@ -7,6 +7,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pkg_resources
 import re
 
+import sklearn.neighbors._base
+sys.modules['sklearn.neighbors.base'] = sklearn.neighbors._base
 from missingpy import KNNImputer, MissForest
 
 COMPL = {"A":"T","T":"A","G":"C","C":"G"}

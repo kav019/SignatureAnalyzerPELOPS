@@ -31,16 +31,16 @@ setup(
         "seaborn>=0.9.0",
         "pandas>=0.25.0",
         "pyarrow>=0.14.1",
-        "scikit-learn>=0.21.3",
+        "scikit-learn==1.1.2",
         "scikit-image>=0.15.0",
         "tqdm>=4.33.0",
         "h5py>=2.9.0",
         "tables>=3.6.1",
-        "missingpy",
+        "missingpy==0.2.0",
         "gprofiler",
         "numpy",
         "matplotlib",
-        "scipy"
+        "scipy==1.9.1"
     ],
     package_data = {
     "":[
